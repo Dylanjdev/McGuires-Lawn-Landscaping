@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>McGuires Lawn & Landscaping</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle">🌙</button>
+
+  <!-- Sticky CTA -->
+  <div id="cta-bar">
+    📞 <a href="tel:2766908331">Call Now</a> • 💬 <a href="#contact">Get a Quote</a>
+  </div>
+
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>Your Yard, Our Mission.</h1>
+      <p>Premium Lawn Care in Southwest VA & Tri-Cities TN</p>
+      <a href="#services" class="btn-primary">See Our Services</a>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <h2 class="section-title">Our Services</h2>
+    <div class="card-grid">
+      <div class="card fade-in"><h3>Mowing</h3><p>Neat, even, and reliable lawn care.</p></div>
+      <div class="card fade-in"><h3>Edging & Trimming</h3><p>Sharp edges and defined borders.</p></div>
+      <div class="card fade-in"><h3>Mulching</h3><p>Enhance soil & beautify beds.</p></div>
+      <div class="card fade-in"><h3>Leaf Removal</h3><p>Clean yards, free of debris.</p></div>
+      <div class="card fade-in"><h3>Pressure Washing</h3><p>Revive patios, driveways & decks.</p></div>
+      <div class="card fade-in"><h3>Gutter Cleaning</h3><p>Protect your home from water damage.</p></div>
+      <div class="card fade-in"><h3>Yard Cleanup</h3><p>From spring refresh to autumn prep.</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials Slider -->
+  <section class="section" id="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="slider fade-in">
+      <div class="slide"><p>“Yard never looked better – great price too!”</p></div>
+      <div class="slide"><p>“Professional team, fast and friendly!”</p></div>
+      <div class="slide"><p>“Always on time, and leaves everything spotless.”</p></div>
+    </div>
+  </section>
+
+<section id="gallery" class="section">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <img src="images/photo6.jpg" alt="Lawn job 1" class="fade-in" />
+    <img src="images/photo2.jpg" alt="Lawn job 2" class="fade-in" />
+    <img src="images/photo3.jpg" alt="Lawn job 3" class="fade-in" />
+    <img src="images/photo4.jpg" alt="Lawn job 4" class="fade-in" />
+    <img src="images/photo7.jpg" alt="Lawn job 5" class="fade-in" />
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+  <!-- Contact Section -->
+<section id="contact" class="section">
+  <h2 class="section-title">Get a Free Quote</h2>
+  <form id="contact-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" name="name" required />
+        <label for="name">Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" required />
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <input type="tel" name="phone" />
+        <label for="phone">Phone (Optional)</label>
+      </div>
+      <div class="form-group">
+        <input type="text" name="location" required />
+        <label for="location">Service Area</label>
+      </div>
+    </div>
+    <div class="form-group full">
+      <textarea name="message" rows="5" required></textarea>
+      <label for="message">What service are you looking for?</label>
+    </div>
+    <button type="submit" class="btn-primary">Send Request</button>
+  </form>
+</section>
+
+  <footer class="footer">
+    <p>&copy; 2025 McGuires Lawn & Landscaping</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
