@@ -199,19 +199,22 @@ body.dark-mode .card {
   position: relative;
 }
 
-.slider {
-  display: flex;
-  transition: transform 9s ease-in-out;
-  width: 300%; /* 3 slides */
+.slider-container {
+  width: 100%;
+  max-width: 600px; /* keep your desired max width */
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
 }
 
 .slide {
-  min-width: 100%;
+  flex: 0 0 100%; /* ensures full width of container */
+  box-sizing: border-box; /* includes padding inside width */
   padding: 20px;
   font-style: italic;
   text-align: center;
-  box-sizing: border-box;
 }
+
 
 #prevBtn, #nextBtn {
   position: absolute;
