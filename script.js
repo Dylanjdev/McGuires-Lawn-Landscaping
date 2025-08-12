@@ -29,3 +29,18 @@ const obs = new IntersectionObserver((entries, o) => {
   });
 }, options);
 faders.forEach(f => obs.observe(f));
+// testimonal slider fix
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  function showSlide() {
+    const offset = -index * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+  }
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide();
+  }, 3000);
+});
