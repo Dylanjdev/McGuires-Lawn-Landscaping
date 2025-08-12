@@ -199,22 +199,19 @@ body.dark-mode .card {
   position: relative;
 }
 
-.slider-container {
-  width: 100%;
-  max-width: 600px; /* keep your desired max width */
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
 }
 
 .slide {
-  flex: 0 0 100%; /* ensures full width of container */
-  box-sizing: border-box; /* includes padding inside width */
+  flex: 0 0 100%;
+  box-sizing: border-box;
   padding: 20px;
   font-style: italic;
   text-align: center;
 }
-
 
 #prevBtn, #nextBtn {
   position: absolute;
@@ -227,16 +224,16 @@ body.dark-mode .card {
   padding: 0 10px;
   cursor: pointer;
   user-select: none;
+  z-index: 5; /* Make sure they're above everything else */
 }
 
-#prevBtn {
-  left: 10px;
-}
 
-#nextBtn {
-  right: 10px;
-}
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
 
+@media (max-width: 400px) {
+  .slide { padding: 10px; }
+}
 
 /* Fade-In Animations */
 .fade-in {
