@@ -29,33 +29,47 @@ const obs = new IntersectionObserver((entries, o) => {
   });
 }, options);
 faders.forEach(f => obs.observe(f));
-// testimonal slider fix
+
+// Testimonial Slider
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector('.slider');
   const slides = document.querySelectorAll('.slide');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
+
   let index = 0;
   const total = slides.length;
+  let interval;
 
   function updateSlider() {
     slider.style.transform = `translateX(${-index * 100}%)`;
   }
 
+  function startAutoSlide() {
+    interval = setInterval(() => {
+      index = (index + 1) % total;
+      updateSlider();
+    }, 7000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+  }
+
   prevBtn.addEventListener('click', () => {
     index = (index - 1 + total) % total;
     updateSlider();
+    resetAutoSlide();
   });
 
   nextBtn.addEventListener('click', () => {
     index = (index + 1) % total;
     updateSlider();
+    resetAutoSlide();
   });
 
-  // Auto-slide every 4 seconds
-  setInterval(() => {
-    index = (index + 1) % total;
-    updateSlider();
-  }, 4000);
+  updateSlider();
+  startAutoSlide();
 });
 
