@@ -192,19 +192,17 @@ body.dark-mode .card {
 
 /* Testimonial Slider */
 .slider {
-  display: flex; overflow: hidden;
-  position: relative;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
+
 .slide {
-  min-width: 100%; padding: 20px;
-  font-style: italic; text-align: center;
+  min-width: 100%;
+  padding: 20px;
+  font-style: italic;
+  text-align: center;
 }
-@keyframes slideAnim {
-  0%, 33% { transform: translateX(0); }
-  66% { transform: translateX(-100%); }
-  100% { transform: translateX(-100%); }
-}
-.slider { animation: slideAnim 15s infinite; }
 
 /* Fade-In Animations */
 .fade-in {
