@@ -31,16 +31,31 @@ const obs = new IntersectionObserver((entries, o) => {
 faders.forEach(f => obs.observe(f));
 // testimonal slider fix
 document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector('.slider');
   const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
   let index = 0;
+  const total = slides.length;
 
-  function showSlide() {
-    const offset = -index * 100;
-    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+  function updateSlider() {
+    slider.style.transform = `translateX(${-index * 100}%)`;
   }
 
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateSlider();
+  });
+
+  // Auto-slide every 4 seconds
   setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide();
-  }, 3000);
+    index = (index + 1) % total;
+    updateSlider();
+  }, 4000);
 });
+
