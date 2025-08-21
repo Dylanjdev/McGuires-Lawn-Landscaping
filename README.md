@@ -1,0 +1,1 @@
+This is a responsive website built for  a local lawn care service. McGuires-Lawn-Landscaping that showcases services, contact information, and allows customers to easily get in touch for quotes or scheduling.
