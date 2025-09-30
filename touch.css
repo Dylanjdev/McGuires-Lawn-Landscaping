@@ -108,15 +108,18 @@ position: relative;
 }
 /* Glass container styles */
 .glass {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.15); /* fallback color */
+    -webkit-backdrop-filter: blur(20px);  /* iOS support */
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
-   /* overflow: hidden; */
+    z-index: 1;
+    background-clip: padding-box; /* improves blur rendering */
 }
+
 .glass:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
@@ -909,3 +912,4 @@ nav.glass {
     display: flex;
   }
 }
+
