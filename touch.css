@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+html {
+	 background: linear-gradient(
+  135deg,
+  #3a7d44 0%,
+  #6dbf4b 25%,
+  #a3d977 50%,
+  #7aa456 75%,   /* darker green instead of beige */
+  #345c2b 100%   /* deep green instead of light blue */
+);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,17 +22,11 @@
 }
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
- background: linear-gradient(
-  135deg,
-  #3a7d44 0%,
-  #6dbf4b 25%,
-  #a3d977 50%,
-  #7aa456 75%,   /* darker green instead of beige */
-  #345c2b 100%   /* deep green instead of light blue */
-);
+ background: transparent;
+	
 
 position: relative;
-
+}
 
     min-height: 100vh;
     overflow-x: hidden;
@@ -912,4 +917,5 @@ nav.glass {
     display: flex;
   }
 }
+
 
