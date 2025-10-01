@@ -26,7 +26,7 @@ body {
 	
 
 position: relative;
-}
+
 
     min-height: 100vh;
     overflow-x: hidden;
@@ -619,6 +619,33 @@ button[type="submit"] {
     opacity: 0.6;
     margin-top: 20px;
 }
+/* 📱 Stack Free Quote form + contact info on smaller screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 20px; /* reduce padding for small screens */
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .contact-form p {
+    text-align: center;
+  }
+
+  .contact-form button {
+    width: 100%; /* make button stretch across screen */
+  }
+}
+
 /* Footer styles */
 #footer {
     margin-top: 60px;
@@ -917,5 +944,4 @@ nav.glass {
     display: flex;
   }
 }
-
 
