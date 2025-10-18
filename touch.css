@@ -965,5 +965,12 @@ a:hover {
   color: #ccc; /* optional: change color on hover */
   text-decoration: underline; /* or add underline if you want */
 }
+.mailto {
+  color: white;
+  font-size: clamp(14px, 2vw, 18px); /* responsive text size */
+  text-align: center;
+  word-break: break-word; /* prevents overflow on small screens */
+  margin: 10px 0;
+}
 
 
