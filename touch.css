@@ -569,6 +569,17 @@ button[type="submit"] {
 .contact-item-text p {
     color: rgba(255, 255, 255, 0.8);
 }
+@media (max-width: 768px) {
+  .contact-item-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-item-text p {
+    font-size: 0.8rem;
+  }
+}
 .contact-map {
     padding: 40px;
     color: white;
@@ -944,4 +955,15 @@ nav.glass {
     display: flex;
   }
 }
+
+a {
+  color: white;
+  text-decoration: underline; /* removes the underline */
+}
+
+a:hover {
+  color: #ccc; /* optional: change color on hover */
+  text-decoration: underline; /* or add underline if you want */
+}
+
 
