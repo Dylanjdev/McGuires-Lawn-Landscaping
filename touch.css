@@ -162,7 +162,7 @@ nav {
 .logo-icon {
    width: 64px;
   height: 64px;
-  background: url("images/logo.png") no-repeat center center;
+  background: url("images/newlogo.png") no-repeat center center;
   background-size: contain;
 }
 .logo-icon svg {
@@ -972,5 +972,7 @@ a:hover {
   word-break: break-word; /* prevents overflow on small screens */
   margin: 10px 0;
 }
-
+ h2 {
+    color: white;
+ }
 
