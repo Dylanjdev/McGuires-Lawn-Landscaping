@@ -1,0 +1,26 @@
+{
+  "name": "mcguires-lawn-landscaping",
+  "version": "1.0.0",
+  "description": "This is a responsive website built for  a local lawn care service. McGuires-Lawn-Landscaping that showcases services, contact information, and allows customers to easily get in touch for quotes or scheduling.",
+  "main": "touch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dylanjdev/McGuires-Lawn-Landscaping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dylanjdev/McGuires-Lawn-Landscaping/issues"
+  },
+  "homepage": "https://github.com/Dylanjdev/McGuires-Lawn-Landscaping#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
