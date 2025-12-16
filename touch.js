@@ -51,6 +51,10 @@ function showToast(msg) {
   setTimeout(() => el.remove(), 2600);
 }
 
-mobileNav.classList.toggle("hidden");
-mobileNav.classList.toggle("animate-slideDown");
+// Add sticky mobile CTA
+const stickyBtn = document.createElement("a");
+stickyBtn.href = "tel:2766908331";
+stickyBtn.className = "md:hidden fixed bottom-4 right-4 z-50 bg-emerald-700 text-white px-6 py-4 rounded-full shadow-2xl font-bold text-sm hover:bg-emerald-800 transition-all animate-fadeIn flex items-center gap-2";
+stickyBtn.innerHTML = "📞 Call Now";
+document.body.appendChild(stickyBtn);
 
