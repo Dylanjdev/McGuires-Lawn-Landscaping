@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>McGuire’s Lawn & Landscaping | Southwest Virginia</title>
-  <meta name="description" content="Licensed & insured lawn care, landscaping, and hardscaping for homes & businesses in Southwest Virginia. Free quotes." />
-  <meta name="keywords" content="lawn care, landscaping, hardscaping, Southwest Virginia, Wise VA, lawn mowing, landscaping services" />
+  <title>McGuire's Lawn & Landscaping | Southwest Virginia | Licensed & Insured</title>
+  <meta name="description" content="Licensed & insured lawn care, landscaping, and hardscaping for homes & businesses in Southwest Virginia. Professional mowing, mulching, retaining walls & more. Free quotes. Serving Wise, Norton, Abingdon." />
+  <meta name="keywords" content="lawn care southwest virginia, landscaping wise va, hardscaping norton va, lawn mowing abingdon, retaining wall big stone gap, mulching lebanon va, irrigation southwest virginia, seasonal cleanup, landscape design, professional lawn service, licensed landscaper virginia" />
   <link rel="canonical" href="https://mcguireslawnandlandscaping.com/" />
   <link rel="icon" href="images/newlogo.png" type="image/png" />
   <link rel="apple-touch-icon" href="images/newlogo.png" />
@@ -66,16 +66,54 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "McGuire’s Lawn & Landscaping",
-    "image": "https://mcguireslawnandlandscaping.com/images/logo.png",
+    "@id": "https://mcguireslawnandlandscaping.com/#business",
+    "name": "McGuire's Lawn & Landscaping",
+    "image": "https://mcguireslawnandlandscaping.com/images/newlogo.png",
+    "logo": "https://mcguireslawnandlandscaping.com/images/newlogo.png",
     "telephone": "+1-276-690-8331",
     "email": "mcguireslawnandgarden2020@gmail.com",
     "url": "https://mcguireslawnandlandscaping.com/",
-    "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" },
-    "areaServed": ["Wise","Abingdon","Norton","Big Stone Gap","Lebanon","Southwest Virginia"],
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressLocality": "Wise", "addressCountry": "US" },
+    "areaServed": [
+      {"@type": "City", "name": "Wise"},
+      {"@type": "City", "name": "Abingdon"},
+      {"@type": "City", "name": "Norton"},
+      {"@type": "City", "name": "Big Stone Gap"},
+      {"@type": "City", "name": "Lebanon"}
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "200"
+    },
+    "serviceType": ["Lawn Care", "Landscaping", "Hardscaping", "Irrigation", "Seasonal Cleanup"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Lawn and Landscaping Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Mowing & Care"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping Design & Installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping & Patios"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mcguireslawnandlandscaping.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://mcguireslawnandlandscaping.com/#services"},
+      {"@type": "ListItem", "position": 3, "name": "Gallery", "item": "https://mcguireslawnandlandscaping.com/#gallery"},
+      {"@type": "ListItem", "position": 4, "name": "Contact", "item": "https://mcguireslawnandlandscaping.com/#contact"}
     ]
   }
   </script>
