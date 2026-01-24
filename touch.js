@@ -1,3 +1,19 @@
+// Hide skeleton loading screen when page is fully loaded
+function hideSkeleton() {
+  const skeletonLoader = document.getElementById("skeleton-loader");
+  if (skeletonLoader) {
+    skeletonLoader.style.display = "none !important";
+  }
+}
+
+// Hide skeleton after 3 seconds regardless
+setTimeout(hideSkeleton, 3000);
+
+// Also hide when page fully loads (whichever comes first)
+window.addEventListener("load", function() {
+  hideSkeleton();
+});
+
 // year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
