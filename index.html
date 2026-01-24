@@ -4,28 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>McGuire's Lawn & Landscaping | Southwest Virginia | Licensed & Insured</title>
-  <meta name="description" content="Licensed & insured lawn care, landscaping, and hardscaping for homes & businesses in Southwest Virginia. Professional mowing, mulching, retaining walls & more. Free quotes. Serving Wise, Norton, Abingdon." />
-  <meta name="keywords" content="lawn care southwest virginia, landscaping wise va, hardscaping norton va, lawn mowing abingdon, retaining wall big stone gap, mulching lebanon va, irrigation southwest virginia, seasonal cleanup, landscape design, professional lawn service, licensed landscaper virginia" />
+  <title>McGuire's Lawn & Landscaping | Southwest Virginia & Tennessee | Licensed & Insured</title>
+  <meta name="description" content="Premier licensed & insured lawn care, landscaping, and hardscaping serving Southwest Virginia & Tennessee since 2023. Professional mowing, mulching, retaining walls, irrigation & more. Free quotes, same-week service. Serving Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN & Johnson City TN. Now booking 2026 season." />
+  <meta name="keywords" content="lawn care southwest virginia 2026, lawn care tennessee, landscaping wise va, landscaping kingsport tn, hardscaping norton va, hardscaping bristol tn, lawn mowing abingdon, lawn mowing johnson city tn, retaining wall big stone gap, retaining wall tennessee, mulching lebanon va, irrigation southwest virginia, irrigation tennessee, seasonal cleanup, landscape design, professional lawn service, licensed landscaper virginia, licensed landscaper tennessee, affordable lawn care wise va, affordable lawn care kingsport tn, best landscaping company norton, best landscaping company bristol tn, residential lawn maintenance, commercial landscaping southwest va, commercial landscaping tennessee, spring cleanup 2026, outdoor living spaces, tri-cities landscaping" />
   <link rel="canonical" href="https://mcguireslawnandlandscaping.com/" />
   <link rel="icon" href="images/newlogo.png" type="image/png" />
   <link rel="apple-touch-icon" href="images/newlogo.png" />
+  
+  <!-- Performance: Preload critical resources -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/newlogo.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="McGuire’s Lawn & Landscaping | Southwest Virginia" />
-  <meta property="og:description" content="Expert lawn care, landscaping, and hardscaping. Licensed & insured. Free quotes." />
+  <meta property="og:title" content="McGuire's Lawn & Landscaping | Southwest Virginia & Tennessee | Licensed & Insured" />
+  <meta property="og:description" content="Premier licensed & insured lawn care, landscaping, and hardscaping serving Southwest Virginia & Tennessee since 2023. Professional service in Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN & Johnson City TN. Now booking 2026 season - Free quotes!" />
   <meta property="og:image" content="https://mcguireslawnandlandscaping.com/images/newlogo.png" />
   <meta property="og:url" content="https://mcguireslawnandlandscaping.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="McGuire’s Lawn & Landscaping | Southwest Virginia" />
-  <meta name="twitter:description" content="Expert lawn care, landscaping, and hardscaping. Licensed & insured. Free quotes." />
-  <meta name="twitter:image" content="https://mcguireslawnandlandscaping.com/images/logo.png" />
+  <meta name="twitter:title" content="McGuire's Lawn & Landscaping | Southwest VA & TN" />
+  <meta name="twitter:description" content="Premier lawn care, landscaping & hardscaping in Southwest Virginia & Tennessee. Licensed & insured in VA & TN. Serving Wise, Norton, Kingsport, Bristol, Johnson City. Free quotes - Now booking 2026!" />
+  <meta name="twitter:image" content="https://mcguireslawnandlandscaping.com/images/newlogo.png" />
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind (CDN) - Async loading for performance -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
 <script>
   tailwind.config = {
     theme: {
@@ -68,19 +74,36 @@
     "@type": "LocalBusiness",
     "@id": "https://mcguireslawnandlandscaping.com/#business",
     "name": "McGuire's Lawn & Landscaping",
+    "alternateName": "McGuire's Lawn and Landscaping",
+    "description": "Premier licensed & insured lawn care, landscaping, and hardscaping serving Southwest Virginia and Tennessee since 2023. Professional mowing, mulching, retaining walls, irrigation systems & more. Licensed in VA & TN.",
     "image": "https://mcguireslawnandlandscaping.com/images/newlogo.png",
     "logo": "https://mcguireslawnandlandscaping.com/images/newlogo.png",
     "telephone": "+1-276-690-8331",
     "email": "mcguireslawnandgarden2020@gmail.com",
     "url": "https://mcguireslawnandlandscaping.com/",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressLocality": "Wise", "addressCountry": "US" },
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Chance McGuire"
+    },
+    "address": { 
+      "@type": "PostalAddress", 
+      "addressRegion": "VA", 
+      "addressLocality": "Wise", 
+      "addressCountry": "US" 
+    },
     "areaServed": [
-      {"@type": "City", "name": "Wise"},
-      {"@type": "City", "name": "Abingdon"},
-      {"@type": "City", "name": "Norton"},
-      {"@type": "City", "name": "Big Stone Gap"},
-      {"@type": "City", "name": "Lebanon"}
+      {"@type": "City", "name": "Wise", "addressRegion": "VA", "@id": "https://en.wikipedia.org/wiki/Wise,_Virginia"},
+      {"@type": "City", "name": "Abingdon", "addressRegion": "VA", "@id": "https://en.wikipedia.org/wiki/Abingdon,_Virginia"},
+      {"@type": "City", "name": "Norton", "addressRegion": "VA", "@id": "https://en.wikipedia.org/wiki/Norton,_Virginia"},
+      {"@type": "City", "name": "Big Stone Gap", "addressRegion": "VA", "@id": "https://en.wikipedia.org/wiki/Big_Stone_Gap,_Virginia"},
+      {"@type": "City", "name": "Lebanon", "addressRegion": "VA", "@id": "https://en.wikipedia.org/wiki/Lebanon,_Virginia"},
+      {"@type": "City", "name": "Kingsport", "addressRegion": "TN", "@id": "https://en.wikipedia.org/wiki/Kingsport,_Tennessee"},
+      {"@type": "City", "name": "Bristol", "addressRegion": "TN", "@id": "https://en.wikipedia.org/wiki/Bristol,_Tennessee"},
+      {"@type": "City", "name": "Johnson City", "addressRegion": "TN", "@id": "https://en.wikipedia.org/wiki/Johnson_City,_Tennessee"},
+      {"@type": "State", "name": "Virginia"},
+      {"@type": "State", "name": "Tennessee"}
     ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
@@ -89,18 +112,25 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "200"
+      "reviewCount": "200",
+      "bestRating": "5",
+      "worstRating": "1"
     },
-    "serviceType": ["Lawn Care", "Landscaping", "Hardscaping", "Irrigation", "Seasonal Cleanup"],
+    "serviceType": ["Lawn Care", "Landscaping", "Hardscaping", "Irrigation", "Seasonal Cleanup", "Lawn Maintenance", "Landscape Design"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Lawn and Landscaping Services",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Mowing & Care"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping Design & Installation"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping & Patios"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lawn Mowing & Care", "description": "Professional lawn mowing, trimming, edging, and maintenance services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Landscaping Design & Installation", "description": "Custom landscape design and professional installation services"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hardscaping & Patios", "description": "Stone patios, walkways, retaining walls, and outdoor living spaces"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seasonal Cleanup", "description": "Spring and fall yard cleanup, leaf removal, and debris hauling"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Irrigation & Drainage", "description": "Sprinkler installation, irrigation systems, and drainage solutions"}}
       ]
-    }
+    },
+    "sameAs": [
+      "https://mcguireslawnandlandscaping.com/"
+    ]
   }
   </script>
 
@@ -117,13 +147,63 @@
     ]
   }
   </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer free quotes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We provide free, no-obligation quotes for all services. Contact us by phone, email, or through our form and we'll schedule a time to assess your property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We proudly serve Southwest Virginia and Tennessee including Wise VA, Abingdon VA, Norton VA, Big Stone Gap VA, Lebanon VA, Kingsport TN, Bristol TN, Johnson City TN, and surrounding areas in both states."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you licensed and insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. McGuire's Lawn & Landscaping is fully licensed and insured to protect both our team and your property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I schedule lawn care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most residential lawns benefit from weekly or bi-weekly mowing during the growing season. We'll help you determine the best schedule based on your grass type and property needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you do both residential and commercial properties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We serve both residential homeowners and commercial businesses. No property is too big or too small."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="min-h-screen bg-gradient-to-b from-emerald-50 to-white text-ink selection:bg-emerald-200/60">
   <!-- Top Notice / CTA -->
   <div class="bg-gradient-to-r from-emerald-700 to-emerald-600 text-white text-sm sm:text-base">
     <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <p class="font-semibold">🎉 WINTER SPECIAL: Book Now, Save 15% on Spring Cleanup! • Limited Slots Available</p>
+      <p class="font-semibold">🎉 2026 SPRING SPECIAL: Book Early & Save 15% on Lawn Care Packages! • Limited Slots Available for Spring Season</p>
       <div class="flex items-center gap-4">
         <a class="inline-flex items-center gap-1 bg-white text-emerald-700 px-4 py-1.5 rounded-full font-bold hover:bg-emerald-50 transition-all shadow-lg" href="tel:2766908331">📞 (276) 690-8331</a>
         <a class="hidden sm:inline underline underline-offset-4 font-medium" href="mailto:Mcguireslawnandgarden2020@gmail.com">Email Us</a>
@@ -135,7 +215,7 @@
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-emerald-100 animate-fadeDown">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3" aria-label="McGuire’s home">
-        <img src="images/newlogo.png" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" alt="McGuire’s logo">
+        <img src="images/newlogo.png" width="40" height="40" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" alt="McGuire's logo">
         <span class="font-semibold">McGuire’s Lawn & Landscaping</span>
       </a>
       <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
@@ -162,37 +242,37 @@
     <section class="relative">
       <div class="absolute inset-0 -z-10">
         <!-- soft pattern / image -->
-        <img src="images/hero.jpg" alt="Beautiful landscaped yard in Southwest Virginia" class="w-full h-full object-cover opacity-30" loading="eager" />
+        <img src="images/hero.jpg" alt="Beautiful landscaped yard in Southwest Virginia" class="w-full h-full object-cover opacity-30" width="1920" height="1080" fetchpriority="high" decoding="async" />
         <div class="absolute inset-0 bg-gradient-to-b from-white/60 to-white"></div>
       </div>
       <div class="max-w-6xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">⏰ Winter Booking Special - Save 15%</div>
+          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">⏰ Spring 2026 Early Booking - Save 15% on All Packages</div>
           <h1 class="text-4xl/tight sm:text-5xl font-extrabold text-ink">
-            Transform Your Yard Into Your Neighborhood's Best
+            Southwest Virginia & Tennessee's Premier Lawn Care & Landscaping Experts
           </h1>
           <p class="mt-4 text-lg text-slate-700">
-            Professional lawn care & landscaping that increases your property value. <strong>Book now for 2026 season</strong> — limited spots available!
+            Professional lawn maintenance, landscape design & hardscaping that increases your property value. <strong>Now booking spring 2026 season</strong> in Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, Johnson City TN & surrounding areas — limited spots available!
           </p>
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="tel:2766908331" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand text-white px-6 py-4 text-lg font-bold hover:bg-brand-dark shadow-card hover:shadow-xl transition-all">
+            <a href="tel:2766908331" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 text-white px-6 py-4 text-lg font-bold hover:bg-emerald-800 shadow-xl hover:shadow-2xl transition-all ring-2 ring-emerald-600">
               📞 Call (276) 690-8331
             </a>
-            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-yellow-400 text-emerald-900 px-6 py-4 text-lg font-bold ring-2 ring-yellow-500 hover:bg-yellow-300 shadow-card hover:shadow-xl transition-all">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-white text-emerald-900 px-6 py-4 text-lg font-bold ring-2 ring-emerald-300 hover:bg-emerald-50 shadow-card hover:shadow-xl transition-all">
               Get Free Quote (Save 15%)
             </a>
           </div>
           <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-slate-700">
-            <div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm"><span>✅</span> <strong>Licensed & Insured</strong></div>
+            <div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm"><span>✅</span> <strong>Licensed & Insured in VA & TN</strong></div>
             <div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm"><span>⭐</span> <strong>4.9/5 Rating</strong></div>
             <div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm"><span>🏆</span> <strong>200+ Happy Clients</strong></div>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <img src="images/work1.jpg" alt="Professional lawn care service results" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy">
-          <img src="images/work2.jpg" alt="Custom stone walkway installation" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy">
-          <img src="images/work3.jpg" alt="Beautiful flower bed landscaping" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy">
-          <img src="images/work4.jpg" alt="Durable retaining wall construction" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy">
+          <img src="images/work1.jpg" width="600" height="400" alt="Professional lawn care service results" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work2.jpg" width="600" height="400" alt="Custom stone walkway installation" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work3.jpg" width="600" height="400" alt="Beautiful flower bed landscaping" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work4.jpg" width="600" height="400" alt="Durable retaining wall construction" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -202,8 +282,8 @@
       <div class="max-w-6xl mx-auto px-4">
         <header class="flex items-end justify-between gap-6 mb-8">
           <div>
-            <h2 class="text-3xl font-bold">Services</h2>
-            <p class="text-slate-700 mt-1">Everything your property needs, done right.</p>
+            <h2 class="text-3xl font-bold">Professional Landscaping Services in Southwest Virginia & Tennessee</h2>
+            <p class="text-slate-700 mt-1">Comprehensive lawn care, landscaping & hardscaping solutions for residential and commercial properties throughout Southwest VA, Tri-Cities TN and beyond.</p>
           </div>
           <a href="#contact" class="hidden sm:inline-flex items-center rounded-lg bg-brand text-white px-4 py-2 hover:bg-brand-dark">Request Free Quote</a>
         </header>
@@ -212,53 +292,71 @@
           <!-- card -->
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">🌿</div>
-            <h3 class="text-xl font-semibold mt-2">Lawn Care</h3>
-            <p class="text-slate-600 mt-1">Mowing, trimming, edging, blowing, fertilization & weed control.</p>
+            <h3 class="text-xl font-semibold mt-2">Professional Lawn Maintenance</h3>
+            <p class="text-slate-600 mt-1">Expert lawn mowing, trimming, edging, blowing, fertilization & comprehensive weed control programs for pristine lawns across Southwest Virginia and Tennessee.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
-              <li>Weekly / Bi-weekly plans</li>
-              <li>Seasonal treatments</li>
-              <li>Healthy, consistent results</li>
+              <li>Weekly / Bi-weekly service plans</li>
+              <li>Seasonal fertilization treatments</li>
+              <li>Organic weed control options</li>
+              <li>Consistent, healthy results</li>
             </ul>
           </article>
 
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">🌳</div>
-            <h3 class="text-xl font-semibold mt-2">Landscaping</h3>
-            <p class="text-slate-600 mt-1">Design & installation to boost curb appeal and property value.</p>
+            <h3 class="text-xl font-semibold mt-2">Landscape Design & Installation</h3>
+            <p class="text-slate-600 mt-1">Custom landscape design and professional installation services to dramatically boost curb appeal and increase property value throughout Southwest Virginia and Tennessee.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
-              <li>Beds, shrubs, trees, flowers</li>
-              <li>Mulching & bed maintenance</li>
-              <li>Plant health & placement</li>
+              <li>Garden beds, native shrubs, trees & perennials</li>
+              <li>Premium mulching & bed maintenance</li>
+              <li>Expert plant health consultation</li>
+              <li>Drought-resistant landscaping options</li>
             </ul>
           </article>
 
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">🧱</div>
-            <h3 class="text-xl font-semibold mt-2">Hardscaping</h3>
-            <p class="text-slate-600 mt-1">Durable features that define your outdoor living.</p>
+            <h3 class="text-xl font-semibold mt-2">Hardscaping & Outdoor Living</h3>
+            <p class="text-slate-600 mt-1">Professional hardscape construction and outdoor living space design. Expert stone work and masonry for homes across Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, and Johnson City TN.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
-              <li>Patios & walkways</li>
-              <li>Stone borders & edging</li>
-              <li>Retaining walls</li>
+              <li>Custom patios & stone walkways</li>
+              <li>Decorative borders & landscape edging</li>
+              <li>Retaining walls & erosion control</li>
+              <li>Fire pits & outdoor kitchens</li>
             </ul>
           </article>
 
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">🍂</div>
-            <h3 class="text-xl font-semibold mt-2">Seasonal Cleanups</h3>
-            <p class="text-slate-600 mt-1">Spring & fall cleanup, leaf removal, debris hauling, storm cleanup.</p>
+            <h3 class="text-xl font-semibold mt-2">Spring & Fall Seasonal Cleanups</h3>
+            <p class="text-slate-600 mt-1">Comprehensive spring and fall property cleanup services. Professional leaf removal, debris hauling, storm cleanup and seasonal property preparation for Southwest Virginia and Tennessee homes and businesses.</p>
+            <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
+              <li>Complete yard debris removal</li>
+              <li>Gutter cleaning available</li>
+              <li>Same-week service for urgent needs</li>
+            </ul>
           </article>
 
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">💧</div>
-            <h3 class="text-xl font-semibold mt-2">Irrigation & Drainage</h3>
-            <p class="text-slate-600 mt-1">Sprinkler install & service, smart watering, drainage solutions.</p>
+            <h3 class="text-xl font-semibold mt-2">Irrigation & Drainage Solutions</h3>
+            <p class="text-slate-600 mt-1">Professional sprinkler system installation and service, smart irrigation solutions, and effective drainage systems to protect your Southwest Virginia and Tennessee property from water damage.</p>
+            <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
+              <li>Sprinkler system design & install</li>
+              <li>Drainage problem solutions</li>
+              <li>Water conservation systems</li>
+            </ul>
           </article>
 
           <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
             <div class="text-3xl">🌻</div>
-            <h3 class="text-xl font-semibold mt-2">Custom Projects</h3>
-            <p class="text-slate-600 mt-1">Lighting, garden features, and special requests—built around you.</p>
+            <h3 class="text-xl font-semibold mt-2">Custom Landscaping Projects</h3>
+            <p class="text-slate-600 mt-1">Unique outdoor projects tailored to your vision. From landscape lighting and water features to custom garden designs and specialty installations for your Southwest Virginia and Tennessee property.</p>
+            <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
+              <li>Outdoor lighting installations</li>
+              <li>Custom garden features</li>
+              <li>Specialty landscape requests</li>
+            </ul>
           </article>
         </div>
 
@@ -321,32 +419,32 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Replace with your real images -->
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work1.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Weekly lawn care" loading="lazy" />
+            <img src="images/work1.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Weekly lawn care" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Weekly Lawn Care</figcaption>
           </figure>
 
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work2.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Stone walkway" loading="lazy" />
+            <img src="images/work2.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Stone walkway" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Stone Walkway</figcaption>
           </figure>
 
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work3.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Flower bed install" loading="lazy" />
+            <img src="images/work3.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Flower bed install" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Flower Bed Install</figcaption>
           </figure>
 
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work4.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Retaining wall" loading="lazy" />
+            <img src="images/work4.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Retaining wall" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Retaining Wall</figcaption>
           </figure>
 
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work5.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Seasonal mulching" loading="lazy" />
+            <img src="images/work5.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Seasonal mulching" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Seasonal Mulching</figcaption>
           </figure>
 
           <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work6.jpg" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Patio/outdoor living" loading="lazy" />
+            <img src="images/work6.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Patio/outdoor living" loading="lazy" decoding="async" />
             <figcaption class="px-4 py-3 text-slate-700">Patio & Outdoor Living</figcaption>
           </figure>
         </div>
@@ -398,8 +496,8 @@
         <div class="mt-10 grid sm:grid-cols-3 gap-6">
           <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20">
             <span class="text-4xl block mb-3">🛡️</span>
-            <p class="font-bold text-lg">Licensed & Fully Insured</p>
-            <p class="text-emerald-100 text-sm mt-2">Your property is protected with full liability coverage</p>
+            <p class="font-bold text-lg">Licensed & Fully Insured in VA & TN</p>
+            <p class="text-emerald-100 text-sm mt-2">Your property is protected with full liability coverage in both states</p>
           </div>
           <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20">
             <span class="text-4xl block mb-3">⚡</span>
@@ -421,8 +519,8 @@
         <div>
           <h2 class="text-3xl font-bold">About Us</h2>
           <p class="text-slate-700 mt-3">
-            McGuire’s Lawn & Landscaping is a locally owned, licensed & insured company serving Southwest Virginia.
-            We treat every property like our own—prioritizing reliability, safety, and attention to detail.
+            McGuire's Lawn & Landscaping is a locally owned, licensed & insured landscaping company proudly serving Southwest Virginia and Tennessee since 2023.
+            With deep roots in Wise County VA and expertise across Norton VA, Abingdon VA, Big Stone Gap VA, Lebanon VA, Kingsport TN, Bristol TN, and Johnson City TN, we treat every residential and commercial property with the same care and attention to detail as our own. Our commitment to reliability, safety, and customer satisfaction has made us one of the region's most trusted lawn care providers across both Virginia and Tennessee.
           </p>
           <dl class="mt-6 grid grid-cols-2 gap-6 text-center">
             <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card">
@@ -452,7 +550,7 @@
           <div class="mt-4 space-y-3 text-slate-700">
             <p>📞 <a class="underline" href="tel:2766908331">(276) 690-8331</a></p>
             <p>✉️ <a class="underline" href="mailto:Mcguireslawnandgarden2020@gmail.com">Mcguireslawnandgarden2020@gmail.com</a></p>
-            <p>📍 Southwest Virginia (Wise · Abingdon · Norton · Big Stone Gap · Lebanon)</p>
+            <p>📍 Southwest Virginia & Tennessee (Wise VA · Norton VA · Abingdon VA · Kingsport TN · Bristol TN · Johnson City TN)</p>
             <p>🕒 Mon–Fri: 8AM–6PM • Sat: 9AM–2PM • Sun: Closed</p>
           </div>
           <div class="mt-6">
@@ -482,7 +580,7 @@
               What areas do you serve?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
             </summary>
-            <p class="text-slate-700 mt-3 pl-1">We proudly serve Southwest Virginia including Wise, Abingdon, Norton, Big Stone Gap, Lebanon, and surrounding areas. Not sure if we cover your location? Just ask!</p>
+            <p class="text-slate-700 mt-3 pl-1">We proudly serve Southwest Virginia and Tennessee including Wise VA, Abingdon VA, Norton VA, Big Stone Gap VA, Lebanon VA, Kingsport TN, Bristol TN, Johnson City TN, and surrounding areas in both states. Not sure if we cover your location? Just ask!</p>
           </details>
 
           <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
@@ -541,9 +639,9 @@
     <section id="contact" class="py-16">
       <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
         <div>
-          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">💰 Save 15% - Limited Time Offer</div>
-          <h2 class="text-3xl font-bold">Get Your Free Quote in 24 Hours</h2>
-          <p class="text-slate-700 mt-2">Tell us about your property and receive a detailed estimate. <strong>Most quotes sent same day!</strong></p>
+          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">💰 Save 15% on Spring 2026 Services - Book Early!</div>
+          <h2 class="text-3xl font-bold">Request Your Free Lawn Care Quote</h2>
+          <p class="text-slate-700 mt-2">Tell us about your Southwest Virginia or Tennessee property and receive a detailed, no-obligation estimate. <strong>Most quotes delivered within 24 hours!</strong> Serving Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, Johnson City TN & surrounding communities.</p>
           <div class="mt-4 flex items-center gap-6 text-sm text-slate-600">
             <div class="flex items-center gap-2"><span class="text-emerald-600">✓</span> No obligation</div>
             <div class="flex items-center gap-2"><span class="text-emerald-600">✓</span> No pressure</div>
@@ -597,9 +695,9 @@
 
         <div class="rounded-2xl bg-emerald-50 ring-1 ring-emerald-100 p-6 h-max">
           <h3 class="text-xl font-semibold">Service Area</h3>
-          <p class="text-slate-700 mt-2">We proudly serve Southwest Virginia:</p>
+          <p class="text-slate-700 mt-2">We proudly serve Southwest Virginia & Tennessee:</p>
           <ul class="mt-3 grid grid-cols-2 gap-1 text-slate-700">
-            <li>Wise</li><li>Abingdon</li><li>Norton</li><li>Big Stone Gap</li><li>Lebanon</li><li>Surrounding Areas</li>
+            <li>Wise, VA</li><li>Kingsport, TN</li><li>Norton, VA</li><li>Bristol, TN</li><li>Abingdon, VA</li><li>Johnson City, TN</li><li>Big Stone Gap, VA</li><li>Lebanon, VA</li><li>Surrounding Areas</li>
           </ul>
           <div class="mt-6 rounded-xl bg-white ring-1 ring-emerald-100 p-4 text-slate-700">
             <p class="font-medium">Hours</p>
@@ -616,10 +714,10 @@
   <footer class="border-t border-emerald-100 bg-white">
     <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
       <div class="flex items-center gap-3">
-        <img src="images/newlogo.png" alt="Logo" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" />
+        <img src="images/newlogo.png" width="40" height="40" alt="McGuire's Lawn & Landscaping logo" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" loading="lazy" decoding="async" />
         <div>
           <div class="font-semibold">McGuire’s Lawn & Landscaping</div>
-          <div class="text-slate-600">Proudly serving Southwest Virginia</div>
+          <div class="text-slate-600">Proudly serving Southwest Virginia & Tennessee</div>
         </div>
       </div>
       <nav class="grid gap-2 text-slate-700">
