@@ -15,6 +15,9 @@
   
   <!-- Performance: Preload critical resources -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap">
   <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
   <link rel="preload" as="image" href="images/newlogo.png">
 
@@ -50,8 +53,13 @@
           brand: { DEFAULT: "#16a34a", dark: "#15803d", light: "#22c55e" },
           ink: "#0f172a",
         },
+        fontFamily: {
+          body: ["Outfit", "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+          display: ["Sora", "Outfit", "Segoe UI", "sans-serif"]
+        },
         boxShadow: {
-          card: "0 10px 30px rgba(2, 6, 23, .08)"
+          card: "0 10px 30px rgba(2, 6, 23, .08)",
+          lift: "0 22px 45px rgba(2, 6, 23, .16)"
         },
         keyframes: {
           fadeDown: {
@@ -209,7 +217,7 @@
   </script>
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-emerald-50 to-white text-ink selection:bg-emerald-200/60">
+<body class="min-h-screen bg-gradient-to-b from-emerald-50 to-white text-ink font-body antialiased selection:bg-emerald-200/60">
   <!-- Inline script to hide skeleton after 1 second -->
   <script>
     setTimeout(function() {
@@ -255,7 +263,7 @@
     </div>
   </div>
   <!-- Top Notice / CTA -->
-  <div class="bg-gradient-to-r from-emerald-700 to-emerald-600 text-white text-sm sm:text-base">
+  <div class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-lime-700 text-white text-sm sm:text-base">
     <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p class="font-semibold">☀️ Spring 2026 Sale Has Ended • Contact Us for Current Pricing & Availability</p>
       <div class="flex items-center gap-4">
@@ -266,17 +274,17 @@
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-emerald-100 animate-fadeDown">
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-emerald-100 animate-fadeDown">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3" aria-label="McGuire’s home">
         <img src="images/newlogo.png" width="40" height="40" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" alt="McGuire's logo">
-        <span class="font-semibold">McGuire’s Lawn & Landscaping</span>
+        <span class="font-display font-bold">McGuire’s Lawn & Landscaping</span>
       </a>
       <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
-        <a href="#services" class="hover:text-emerald-700 transition-colors">Services</a>
-        <a href="#gallery" class="hover:text-emerald-700 transition-colors">Gallery</a>
-        <a href="#about" class="hover:text-emerald-700 transition-colors">About</a>
-        <a href="#contact" class="inline-flex items-center rounded-lg bg-brand text-white px-4 py-2 hover:bg-brand-dark shadow-sm transition-all">Request Free Quote</a>
+        <a href="#services" class="font-medium hover:text-emerald-700 transition-colors">Services</a>
+        <a href="#gallery" class="font-medium hover:text-emerald-700 transition-colors">Gallery</a>
+        <a href="#about" class="font-medium hover:text-emerald-700 transition-colors">About</a>
+        <a href="#contact" class="inline-flex items-center rounded-xl bg-brand text-white px-4 py-2.5 hover:bg-brand-dark shadow-card transition-all">Request Free Quote</a>
       </nav>
       <button id="hamburger" class="md:hidden p-2 rounded-md ring-1 ring-emerald-200" aria-label="Open menu">☰</button>
     </div>
@@ -293,7 +301,7 @@
 
   <main id="home">
     <!-- Hero -->
-    <section class="relative">
+    <section class="relative overflow-hidden">
       <div class="absolute inset-0 -z-10">
         <!-- soft pattern / image -->
         <img src="images/hero.jpg" alt="Beautiful landscaped yard in Southwest Virginia" class="w-full h-full object-cover opacity-30" width="1920" height="1080" fetchpriority="high" decoding="async" />
@@ -302,17 +310,17 @@
       <div class="max-w-6xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <div>
           <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">☀️ Spring 2026 Sale Has Ended — Contact Us for Current Pricing</div>
-          <h1 class="text-4xl/tight sm:text-5xl font-extrabold text-ink">
+          <h1 class="text-4xl/tight sm:text-5xl font-display font-extrabold text-ink">
             Southwest Virginia & Tennessee's Premier Lawn Care & Landscaping Experts
           </h1>
           <p class="mt-4 text-lg text-slate-700">
             Professional lawn maintenance, landscape design & hardscaping that increases your property value. Serving Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, Johnson City TN & surrounding areas — <strong>contact us today for current availability!</strong>
           </p>
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="tel:2766908331" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 text-white px-6 py-4 text-lg font-bold hover:bg-emerald-800 shadow-xl hover:shadow-2xl transition-all ring-2 ring-emerald-600">
+            <a href="tel:2766908331" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 text-white px-6 py-4 text-lg font-bold hover:bg-emerald-800 shadow-card hover:shadow-lift transition-all ring-2 ring-emerald-600">
               📞 Call (276) 690-8331
             </a>
-            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-white text-emerald-900 px-6 py-4 text-lg font-bold ring-2 ring-emerald-300 hover:bg-emerald-50 shadow-card hover:shadow-xl transition-all">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-white text-emerald-900 px-6 py-4 text-lg font-bold ring-2 ring-emerald-300 hover:bg-emerald-50 shadow-card hover:shadow-lift transition-all">
               Get Free Quote
             </a>
           </div>
@@ -332,20 +340,21 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16">
+    <section id="services" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4">
-        <header class="flex items-end justify-between gap-6 mb-8">
+        <header class="flex flex-wrap items-end justify-between gap-6 mb-10">
           <div>
-            <h2 class="text-3xl font-bold">Professional Landscaping Services in Southwest Virginia & Tennessee</h2>
-            <p class="text-slate-700 mt-1">Comprehensive lawn care, landscaping & hardscaping solutions for residential and commercial properties throughout Southwest VA, Tri-Cities TN and beyond.</p>
+            <p class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-800 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em]">Core Services</p>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold mt-3">Professional Landscaping Services in Southwest Virginia & Tennessee</h2>
+            <p class="text-slate-700 mt-2 max-w-3xl">Comprehensive lawn care, landscaping & hardscaping solutions for residential and commercial properties throughout Southwest VA, Tri-Cities TN and beyond.</p>
           </div>
-          <a href="#contact" class="hidden sm:inline-flex items-center rounded-lg bg-brand text-white px-4 py-2 hover:bg-brand-dark">Request Free Quote</a>
+          <a href="#contact" class="hidden sm:inline-flex items-center rounded-xl bg-brand text-white px-5 py-2.5 font-semibold hover:bg-brand-dark shadow-card hover:shadow-lift transition-all">Request Free Quote</a>
         </header>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- card -->
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">🌿</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">🌿</div>
             <h3 class="text-xl font-semibold mt-2">Professional Lawn Maintenance</h3>
             <p class="text-slate-600 mt-1">Expert lawn mowing, trimming, edging, blowing, fertilization & comprehensive weed control programs for pristine lawns across Southwest Virginia and Tennessee.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -356,8 +365,8 @@
             </ul>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">🌳</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">🌳</div>
             <h3 class="text-xl font-semibold mt-2">Landscape Design & Installation</h3>
             <p class="text-slate-600 mt-1">Custom landscape design and professional installation services to dramatically boost curb appeal and increase property value throughout Southwest Virginia and Tennessee.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -368,8 +377,8 @@
             </ul>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">🧱</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">🧱</div>
             <h3 class="text-xl font-semibold mt-2">Hardscaping & Outdoor Living</h3>
             <p class="text-slate-600 mt-1">Professional hardscape construction and outdoor living space design. Expert stone work and masonry for homes across Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, and Johnson City TN.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -380,8 +389,8 @@
             </ul>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">🍂</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">🍂</div>
             <h3 class="text-xl font-semibold mt-2">Spring & Fall Seasonal Cleanups</h3>
             <p class="text-slate-600 mt-1">Comprehensive spring and fall property cleanup services. Professional leaf removal, debris hauling, storm cleanup and seasonal property preparation for Southwest Virginia and Tennessee homes and businesses.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -391,8 +400,8 @@
             </ul>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">💧</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">💧</div>
             <h3 class="text-xl font-semibold mt-2">Irrigation & Drainage Solutions</h3>
             <p class="text-slate-600 mt-1">Professional sprinkler system installation and service, smart irrigation solutions, and effective drainage systems to protect your Southwest Virginia and Tennessee property from water damage.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -402,8 +411,8 @@
             </ul>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-xl hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
-            <div class="text-3xl">🌻</div>
+          <article class="rounded-2xl bg-gradient-to-b from-white to-emerald-50/50 ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift hover:ring-emerald-300 transition-all duration-300 hover:-translate-y-1">
+            <div class="text-3xl h-12 w-12 rounded-xl bg-emerald-100 flex items-center justify-center">🌻</div>
             <h3 class="text-xl font-semibold mt-2">Custom Landscaping Projects</h3>
             <p class="text-slate-600 mt-1">Unique outdoor projects tailored to your vision. From landscape lighting and water features to custom garden designs and specialty installations for your Southwest Virginia and Tennessee property.</p>
             <ul class="mt-4 text-slate-700 list-disc list-inside space-y-1">
@@ -415,8 +424,8 @@
         </div>
 
         <!-- Service Packages -->
-        <div class="mt-16">
-          <h3 class="text-2xl font-bold text-center mb-2">Popular Service Packages</h3>
+        <div class="mt-16 rounded-3xl bg-gradient-to-br from-emerald-50 to-lime-50/70 ring-1 ring-emerald-100 p-6 sm:p-8">
+          <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-center mb-2">Popular Service Packages</h3>
           <p class="text-slate-700 text-center mb-8">Save money with our bundled services</p>
           
           <div class="grid md:grid-cols-3 gap-6">
@@ -465,54 +474,91 @@
     </section>
 
     <!-- Gallery -->
-    <section id="gallery" class="py-16 bg-emerald-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold">Recent Work</h2>
-        <p class="text-slate-700 mt-1 mb-8">A few projects we’ve completed for local homeowners & businesses.</p>
+    <section id="gallery" class="relative py-20 overflow-hidden bg-gradient-to-b from-emerald-50 via-lime-50/60 to-white">
+      <div class="absolute -top-10 -left-8 h-44 w-44 rounded-full bg-emerald-200/50 blur-3xl"></div>
+      <div class="absolute -bottom-8 right-0 h-48 w-48 rounded-full bg-lime-200/50 blur-3xl"></div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Replace with your real images -->
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work1.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Weekly lawn care" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Weekly Lawn Care</figcaption>
+      <div class="max-w-6xl mx-auto px-4 relative">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+          <div>
+            <p class="inline-flex items-center rounded-full bg-white/80 ring-1 ring-emerald-200 px-4 py-1 text-xs tracking-[0.18em] uppercase font-bold text-emerald-800">Project Highlights</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Recent Work Around Southwest VA & TN</h2>
+            <p class="text-slate-700 mt-2 max-w-2xl">Real properties. Real before-and-after impact. From precision mowing to hardscape installs, every job is built to look clean now and hold up long term.</p>
+          </div>
+          <div class="rounded-2xl bg-white/80 backdrop-blur px-4 py-3 ring-1 ring-emerald-200 shadow-sm">
+            <p class="text-xs uppercase tracking-widest text-slate-500">Updated Portfolio</p>
+            <p class="text-2xl font-extrabold text-emerald-700">2026 Season</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px]">
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card sm:col-span-2 sm:row-span-2">
+            <img src="images/work1.jpg" width="1200" height="900" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Weekly lawn care" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
+            <figcaption class="absolute left-4 right-4 bottom-4 text-white">
+              <span class="inline-flex rounded-full bg-emerald-500/90 px-3 py-1 text-xs font-semibold tracking-wide uppercase">Maintenance</span>
+              <p class="mt-2 text-xl font-bold">Weekly Lawn Care</p>
+              <p class="text-sm text-emerald-50/90">Sharp edges, even cuts, clean curb appeal every visit.</p>
+            </figcaption>
           </figure>
 
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work2.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Stone walkway" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Stone Walkway</figcaption>
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
+            <img src="images/work2.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Stone walkway" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
+            <figcaption class="absolute left-3 right-3 bottom-3 text-white">
+              <p class="font-bold">Stone Walkway</p>
+              <p class="text-xs text-emerald-50/90">Hardscaping</p>
+            </figcaption>
           </figure>
 
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work3.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Flower bed install" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Flower Bed Install</figcaption>
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
+            <img src="images/work3.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Flower bed install" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
+            <figcaption class="absolute left-3 right-3 bottom-3 text-white">
+              <p class="font-bold">Flower Bed Install</p>
+              <p class="text-xs text-emerald-50/90">Design + Planting</p>
+            </figcaption>
           </figure>
 
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work4.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Retaining wall" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Retaining Wall</figcaption>
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card lg:col-span-2">
+            <img src="images/work4.jpg" width="900" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Retaining wall" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
+            <figcaption class="absolute left-4 right-4 bottom-4 text-white">
+              <p class="font-bold text-lg">Retaining Wall</p>
+              <p class="text-sm text-emerald-50/90">Built for drainage and long-term slope control.</p>
+            </figcaption>
           </figure>
 
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work5.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Seasonal mulching" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Seasonal Mulching</figcaption>
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
+            <img src="images/work5.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Seasonal mulching" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
+            <figcaption class="absolute left-3 right-3 bottom-3 text-white">
+              <p class="font-bold">Seasonal Mulching</p>
+              <p class="text-xs text-emerald-50/90">Crisp, weed-resistant finish</p>
+            </figcaption>
           </figure>
 
-          <figure class="rounded-xl overflow-hidden bg-white ring-1 ring-emerald-100 shadow-card hover:shadow-xl transition-all duration-300 group">
-            <img src="images/work6.jpg" width="600" height="400" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-300" alt="Patio/outdoor living" loading="lazy" decoding="async" />
-            <figcaption class="px-4 py-3 text-slate-700">Patio & Outdoor Living</figcaption>
+          <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
+            <img src="images/work6.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Patio/outdoor living" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
+            <figcaption class="absolute left-3 right-3 bottom-3 text-white">
+              <p class="font-bold">Patio & Outdoor Living</p>
+              <p class="text-xs text-emerald-50/90">Gathering spaces that last</p>
+            </figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16">
+    <section class="py-20 bg-gradient-to-b from-white to-emerald-50/60">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center">What Our Clients Say</h2>
+        <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Client Reviews</p>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-center mt-2">What Our Clients Say</h2>
         <p class="text-slate-700 text-center mt-1 mb-8">Real reviews from satisfied customers</p>
 
         <div class="grid md:grid-cols-3 gap-6">
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card">
+          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift transition-all">
             <div class="flex items-center gap-1 text-yellow-500 mb-3">
               <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
             </div>
@@ -521,7 +567,7 @@
             <p class="text-sm text-slate-500">Wise, VA</p>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card">
+          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift transition-all">
             <div class="flex items-center gap-1 text-yellow-500 mb-3">
               <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
             </div>
@@ -530,7 +576,7 @@
             <p class="text-sm text-slate-500">Norton, VA</p>
           </article>
 
-          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card">
+          <article class="rounded-2xl bg-white ring-1 ring-emerald-100 p-6 shadow-card hover:shadow-lift transition-all">
             <div class="flex items-center gap-1 text-yellow-500 mb-3">
               <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
             </div>
@@ -543,22 +589,23 @@
     </section>
 
     <!-- Guarantee & Trust -->
-    <section class="py-16 bg-gradient-to-br from-emerald-700 to-emerald-600 text-white">
+    <section class="py-20 bg-gradient-to-br from-emerald-800 via-emerald-700 to-lime-700 text-white">
       <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold">100% Satisfaction Guarantee</h2>
+        <p class="text-xs uppercase tracking-[0.2em] text-emerald-100 font-semibold">Built on Trust</p>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold mt-2">100% Satisfaction Guarantee</h2>
         <p class="text-emerald-100 mt-3 text-lg sm:text-xl max-w-2xl mx-auto">We stand behind our work. If you're not completely satisfied with any service, we'll make it right—no questions asked.</p>
         <div class="mt-10 grid sm:grid-cols-3 gap-6">
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20">
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20 hover:bg-white/15 transition-colors">
             <span class="text-4xl block mb-3">🛡️</span>
             <p class="font-bold text-lg">Licensed & Fully Insured in VA & TN</p>
             <p class="text-emerald-100 text-sm mt-2">Your property is protected with full liability coverage in both states</p>
           </div>
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20">
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20 hover:bg-white/15 transition-colors">
             <span class="text-4xl block mb-3">⚡</span>
             <p class="font-bold text-lg">Same-Week Service</p>
             <p class="text-emerald-100 text-sm mt-2">Fast response times for urgent needs</p>
           </div>
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20">
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-6 ring-1 ring-white/20 hover:bg-white/15 transition-colors">
             <span class="text-4xl block mb-3">💰</span>
             <p class="font-bold text-lg">Transparent Pricing</p>
             <p class="text-emerald-100 text-sm mt-2">No hidden fees—you'll know the cost upfront</p>
@@ -568,39 +615,40 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-16 bg-emerald-50">
+    <section id="about" class="py-20 bg-emerald-50">
       <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="text-3xl font-bold">About Us</h2>
+          <p class="inline-flex items-center rounded-full bg-white ring-1 ring-emerald-200 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800">About The Team</p>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold mt-3">About Us</h2>
           <p class="text-slate-700 mt-3">
             McGuire's Lawn & Landscaping is a locally owned, licensed & insured landscaping company proudly serving Southwest Virginia and Tennessee since 2023.
             With deep roots in Wise County VA and expertise across Norton VA, Abingdon VA, Big Stone Gap VA, Lebanon VA, Kingsport TN, Bristol TN, and Johnson City TN, we treat every residential and commercial property with the same care and attention to detail as our own. Our commitment to reliability, safety, and customer satisfaction has made us one of the region's most trusted lawn care providers across both Virginia and Tennessee.
           </p>
           <dl class="mt-6 grid grid-cols-2 gap-6 text-center">
-            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card">
+            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card hover:shadow-lift transition-all">
               <dt class="text-2xl font-bold">200+</dt>
               <dd class="text-slate-600">Lawns Cared For</dd>
             </div>
-            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card">
+            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card hover:shadow-lift transition-all">
               <dt class="text-2xl font-bold">100+</dt>
               <dd class="text-slate-600">Happy Clients</dd>
             </div>
-            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card">
+            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card hover:shadow-lift transition-all">
               <dt class="text-2xl font-bold">3+</dt>
               <dd class="text-slate-600">Years Experience</dd>
             </div>
-            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card">
+            <div class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card hover:shadow-lift transition-all">
               <dt class="text-2xl font-bold">100%</dt>
               <dd class="text-slate-600">Locally Owned</dd>
             </div>
           </dl>
           <p class="text-slate-700 mt-6">
-            Founder <strong>Chance McGuire</strong> leads every project with care. Website by <strong>Dylan Smith</strong>.
+            Founder <strong>Chance McGuire</strong> leads every project with care. Built by <a href="https://smithdigitals.com/" target="_blank" rel="noopener noreferrer" class="font-semibold underline decoration-emerald-400 underline-offset-2 hover:text-emerald-700 transition-colors">Smith Digitals</a>.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-emerald-50 ring-1 ring-emerald-100 p-6">
-          <h3 class="text-xl font-semibold">Contact</h3>
+        <div class="rounded-3xl bg-gradient-to-br from-white to-emerald-100/70 ring-1 ring-emerald-200 p-6 sm:p-8 shadow-card">
+          <h3 class="text-xl sm:text-2xl font-display font-bold">Contact</h3>
           <div class="mt-4 space-y-3 text-slate-700">
             <p>📞 <a class="underline" href="tel:2766908331">(276) 690-8331</a></p>
             <p>✉️ <a class="underline" href="mailto:Mcguireslawnandgarden2020@gmail.com">Mcguireslawnandgarden2020@gmail.com</a></p>
@@ -608,20 +656,21 @@
             <p>🕒 Mon–Fri: 8AM–6PM • Sat: 9AM–2PM • Sun: Closed</p>
           </div>
           <div class="mt-6">
-            <a href="#contact" class="inline-flex items-center rounded-lg bg-brand text-white px-5 py-3 hover:bg-brand-dark">Request Free Quote</a>
+            <a href="#contact" class="inline-flex items-center rounded-xl bg-brand text-white px-5 py-3 font-semibold hover:bg-brand-dark shadow-card hover:shadow-lift transition-all">Request Free Quote</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-emerald-50">
+    <section class="py-20 bg-gradient-to-b from-emerald-50 to-white">
       <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center">Frequently Asked Questions</h2>
+        <p class="text-center text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Need Answers?</p>
+        <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-center mt-2">Frequently Asked Questions</h2>
         <p class="text-slate-700 text-center mt-1 mb-8">Common questions about our services</p>
 
         <div class="space-y-4">
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               Do you offer free quotes?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -629,7 +678,7 @@
             <p class="text-slate-700 mt-3 pl-1">Yes! We provide free, no-obligation quotes for all services. Contact us by phone, email, or through our form and we'll schedule a time to assess your property.</p>
           </details>
 
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               What areas do you serve?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -637,7 +686,7 @@
             <p class="text-slate-700 mt-3 pl-1">We proudly serve Southwest Virginia and Tennessee including Wise VA, Abingdon VA, Norton VA, Big Stone Gap VA, Lebanon VA, Kingsport TN, Bristol TN, Johnson City TN, and surrounding areas in both states. Not sure if we cover your location? Just ask!</p>
           </details>
 
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               Are you licensed and insured?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -645,7 +694,7 @@
             <p class="text-slate-700 mt-3 pl-1">Absolutely. McGuire's Lawn & Landscaping is fully licensed and insured to protect both our team and your property.</p>
           </details>
 
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               How often should I schedule lawn care?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -653,7 +702,7 @@
             <p class="text-slate-700 mt-3 pl-1">Most residential lawns benefit from weekly or bi-weekly mowing during the growing season. We'll help you determine the best schedule based on your grass type and property needs.</p>
           </details>
 
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               Do you do both residential and commercial properties?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -661,7 +710,7 @@
             <p class="text-slate-700 mt-3 pl-1">Yes! We serve both residential homeowners and commercial businesses. No property is too big or too small.</p>
           </details>
 
-          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group">
+          <details class="rounded-xl bg-white ring-1 ring-emerald-100 p-5 shadow-card group hover:shadow-lift transition-all">
             <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
               What payment methods do you accept?
               <span class="text-emerald-700 group-open:rotate-180 transition-transform">▼</span>
@@ -673,9 +722,10 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="py-16 bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-700">
+    <section class="py-20 bg-gradient-to-r from-emerald-800 via-emerald-700 to-lime-700">
       <div class="max-w-5xl mx-auto px-4 text-center">
-        <h3 class="text-3xl sm:text-4xl font-bold text-white">Ready for a Yard You'll Love?</h3>
+        <p class="text-xs uppercase tracking-[0.2em] text-emerald-100 font-semibold">Fast Booking</p>
+        <h3 class="text-3xl sm:text-4xl font-display font-extrabold text-white mt-2">Ready for a Yard You'll Love?</h3>
         <p class="text-emerald-100 mt-3 text-lg sm:text-xl">Book your free quote today — no obligation, most quotes within 24 hours</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <a href="tel:2766908331" class="inline-flex items-center justify-center gap-2 rounded-xl bg-white text-emerald-900 px-8 py-5 text-lg font-bold hover:bg-emerald-50 transition-all shadow-2xl">
@@ -690,11 +740,11 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
-        <div>
-          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">� Request Your Free No-Obligation Quote Today</div>
-          <h2 class="text-3xl font-bold">Request Your Free Lawn Care Quote</h2>
+        <div class="rounded-3xl bg-gradient-to-br from-emerald-50 to-white ring-1 ring-emerald-100 p-6 sm:p-8 shadow-card">
+          <div class="inline-block bg-yellow-400 text-emerald-900 px-4 py-2 rounded-full font-bold text-sm mb-3">Request Your Free No-Obligation Quote Today</div>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold">Request Your Free Lawn Care Quote</h2>
           <p class="text-slate-700 mt-2">Tell us about your Southwest Virginia or Tennessee property and receive a detailed, no-obligation estimate. <strong>Most quotes delivered within 24 hours!</strong> Serving Wise VA, Norton VA, Abingdon VA, Kingsport TN, Bristol TN, Johnson City TN & surrounding communities.</p>
           <div class="mt-4 flex items-center gap-6 text-sm text-slate-600">
             <div class="flex items-center gap-2"><span class="text-emerald-600">✓</span> No obligation</div>
@@ -739,7 +789,7 @@
             <input type="hidden" name="_subject" value="New Free Quote Request from McGuire's Website" />
             <input type="hidden" name="_next" value="https://mcguireslawnandlandscaping.com/thank-you.html" />
 
-            <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 text-white px-8 py-4 text-lg font-bold hover:bg-emerald-800 shadow-xl hover:shadow-2xl transition-all">
+            <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-700 text-white px-8 py-4 text-lg font-bold hover:bg-emerald-800 shadow-card hover:shadow-lift transition-all">
               Get My Free Quote
             </button>
 
@@ -747,13 +797,13 @@
           </form>
         </div>
 
-        <div class="rounded-2xl bg-emerald-50 ring-1 ring-emerald-100 p-6 h-max">
-          <h3 class="text-xl font-semibold">Service Area</h3>
-          <p class="text-slate-700 mt-2">We proudly serve Southwest Virginia & Tennessee:</p>
-          <ul class="mt-3 grid grid-cols-2 gap-1 text-slate-700">
+        <div class="rounded-3xl bg-gradient-to-br from-emerald-800 to-lime-700 text-white ring-1 ring-emerald-700/50 p-6 sm:p-8 h-max shadow-lift">
+          <h3 class="text-xl sm:text-2xl font-display font-bold">Service Area</h3>
+          <p class="text-emerald-100 mt-2">We proudly serve Southwest Virginia & Tennessee:</p>
+          <ul class="mt-3 grid grid-cols-2 gap-1 text-emerald-50">
             <li>Wise, VA</li><li>Kingsport, TN</li><li>Norton, VA</li><li>Bristol, TN</li><li>Abingdon, VA</li><li>Johnson City, TN</li><li>Big Stone Gap, VA</li><li>Lebanon, VA</li><li>Surrounding Areas</li>
           </ul>
-          <div class="mt-6 rounded-xl bg-white ring-1 ring-emerald-100 p-4 text-slate-700">
+          <div class="mt-6 rounded-xl bg-white/15 backdrop-blur ring-1 ring-white/25 p-4 text-emerald-50">
             <p class="font-medium">Hours</p>
             <p class="mt-1">Mon–Fri: 8AM–6PM</p>
             <p>Sat: 9AM–2PM</p>
@@ -765,25 +815,27 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-emerald-100 bg-white">
+  <footer class="border-t border-emerald-900/30 bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-emerald-50">
     <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
       <div class="flex items-center gap-3">
         <img src="images/newlogo.png" width="40" height="40" alt="McGuire's Lawn & Landscaping logo" class="h-10 w-10 rounded-md ring-1 ring-emerald-200 object-contain" loading="lazy" decoding="async" />
         <div>
           <div class="font-semibold">McGuire’s Lawn & Landscaping</div>
-          <div class="text-slate-600">Proudly serving Southwest Virginia & Tennessee</div>
+          <div class="text-emerald-200">Proudly serving Southwest Virginia & Tennessee</div>
         </div>
       </div>
-      <nav class="grid gap-2 text-slate-700">
-        <a href="#services" class="hover:text-emerald-700">Services</a>
-        <a href="#gallery" class="hover:text-emerald-700">Gallery</a>
-        <a href="#about" class="hover:text-emerald-700">About</a>
-        <a href="#contact" class="hover:text-emerald-700">Contact</a>
+      <nav class="grid gap-2 text-emerald-100">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#gallery" class="hover:text-white">Gallery</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
-      <div class="text-slate-700">
+      <div class="text-emerald-100">
         <p>📞 <a class="underline" href="tel:2766908331">(276) 690-8331</a></p>
         <p>✉️ <a class="underline" href="mailto:Mcguireslawnandgarden2020@gmail.com">Mcguireslawnandgarden2020@gmail.com</a></p>
-        <p class="mt-3 text-slate-500">&copy; <span id="year"></span> McGuire’s Lawn & Landscaping. All rights reserved.</p>        <p class="mt-2 text-slate-400 text-sm">Built by <a href="https://smithdigitals.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-emerald-600 transition-colors">Smith Digitals</a></p>      </div>
+        <p class="mt-3 text-emerald-300">&copy; <span id="year"></span> McGuire’s Lawn & Landscaping. All rights reserved.</p>
+        <p class="mt-2 text-emerald-300 text-sm">Built by <a href="https://smithdigitals.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors">Smith Digitals</a></p>
+      </div>
     </div>
   </footer>
 
