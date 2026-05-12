@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <title>McGuire's Lawn & Landscaping | Southwest Virginia & Tennessee | Licensed & Insured</title>
@@ -14,11 +15,11 @@
   <link rel="apple-touch-icon" href="images/newlogo.png" />
   
   <!-- Performance: Preload critical resources -->
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap">
-  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="tailwind.css">
+  <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
   <link rel="preload" as="image" href="images/newlogo.png">
 
   <!-- Open Graph -->
@@ -42,48 +43,6 @@
       50% { opacity: 0.5; }
     }
   </style>
-
-  <!-- Tailwind (CDN) - Async loading for performance -->
-  <script src="https://cdn.tailwindcss.com" defer></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: { DEFAULT: "#16a34a", dark: "#15803d", light: "#22c55e" },
-          ink: "#0f172a",
-        },
-        fontFamily: {
-          body: ["Outfit", "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"],
-          display: ["Sora", "Outfit", "Segoe UI", "sans-serif"]
-        },
-        boxShadow: {
-          card: "0 10px 30px rgba(2, 6, 23, .08)",
-          lift: "0 22px 45px rgba(2, 6, 23, .16)"
-        },
-        keyframes: {
-          fadeDown: {
-            "0%": { opacity: "0", transform: "translateY(-20px)" },
-            "100%": { opacity: "1", transform: "translateY(0)" }
-          },
-          fadeIn: {
-            "0%": { opacity: "0" },
-            "100%": { opacity: "1" }
-          },
-          slideDown: {
-            "0%": { opacity: "0", transform: "translateY(-10px)" },
-            "100%": { opacity: "1", transform: "translateY(0)" }
-          }
-        },
-        animation: {
-          fadeDown: "fadeDown 0.4s ease-out",
-          fadeIn: "fadeIn 0.4s ease-out",
-          slideDown: "slideDown 0.25s ease-out"
-        }
-      }
-    }
-  }
-</script>
 
   <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -304,7 +263,7 @@
     <section class="relative overflow-hidden">
       <div class="absolute inset-0 -z-10">
         <!-- soft pattern / image -->
-        <img src="images/hero.jpg" alt="Beautiful landscaped yard in Southwest Virginia" class="w-full h-full object-cover opacity-30" width="1920" height="1080" fetchpriority="high" decoding="async" />
+        <img src="images/hero.webp" alt="Beautiful landscaped yard in Southwest Virginia" class="w-full h-full object-cover opacity-30" width="1920" height="1080" fetchpriority="high" decoding="async" />
         <div class="absolute inset-0 bg-gradient-to-b from-white/60 to-white"></div>
       </div>
       <div class="max-w-6xl mx-auto px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
@@ -331,10 +290,10 @@
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <img src="images/work1.jpg" width="600" height="400" alt="Professional lawn care service results" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
-          <img src="images/work2.jpg" width="600" height="400" alt="Custom stone walkway installation" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
-          <img src="images/work3.jpg" width="600" height="400" alt="Beautiful flower bed landscaping" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
-          <img src="images/work4.jpg" width="600" height="400" alt="Durable retaining wall construction" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work1.webp" width="600" height="400" alt="Professional lawn care service results" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work2.webp" width="600" height="400" alt="Custom stone walkway installation" class="h-48 sm:h-56 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work3.webp" width="600" height="400" alt="Beautiful flower bed landscaping" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
+          <img src="images/work4.webp" width="600" height="400" alt="Durable retaining wall construction" class="h-40 sm:h-44 w-full object-cover rounded-xl shadow-card hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -493,7 +452,7 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 auto-rows-[220px]">
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card sm:col-span-2 sm:row-span-2">
-            <img src="images/work1.jpg" width="1200" height="900" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Weekly lawn care" loading="lazy" decoding="async" />
+            <img src="images/work1.webp" width="1200" height="900" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Weekly lawn care" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
             <figcaption class="absolute left-4 right-4 bottom-4 text-white">
               <span class="inline-flex rounded-full bg-emerald-500/90 px-3 py-1 text-xs font-semibold tracking-wide uppercase">Maintenance</span>
@@ -503,7 +462,7 @@
           </figure>
 
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
-            <img src="images/work2.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Stone walkway" loading="lazy" decoding="async" />
+            <img src="images/work2.webp" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Stone walkway" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
             <figcaption class="absolute left-3 right-3 bottom-3 text-white">
               <p class="font-bold">Stone Walkway</p>
@@ -512,7 +471,7 @@
           </figure>
 
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
-            <img src="images/work3.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Flower bed install" loading="lazy" decoding="async" />
+            <img src="images/work3.webp" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Flower bed install" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
             <figcaption class="absolute left-3 right-3 bottom-3 text-white">
               <p class="font-bold">Flower Bed Install</p>
@@ -521,7 +480,7 @@
           </figure>
 
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card lg:col-span-2">
-            <img src="images/work4.jpg" width="900" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Retaining wall" loading="lazy" decoding="async" />
+            <img src="images/work4.webp" width="900" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Retaining wall" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
             <figcaption class="absolute left-4 right-4 bottom-4 text-white">
               <p class="font-bold text-lg">Retaining Wall</p>
@@ -530,7 +489,7 @@
           </figure>
 
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
-            <img src="images/work5.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Seasonal mulching" loading="lazy" decoding="async" />
+            <img src="images/work5.webp" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Seasonal mulching" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
             <figcaption class="absolute left-3 right-3 bottom-3 text-white">
               <p class="font-bold">Seasonal Mulching</p>
@@ -539,7 +498,7 @@
           </figure>
 
           <figure class="group relative rounded-2xl overflow-hidden ring-1 ring-emerald-200/70 shadow-card">
-            <img src="images/work6.jpg" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Patio/outdoor living" loading="lazy" decoding="async" />
+            <img src="images/work6.webp" width="600" height="500" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Patio/outdoor living" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-black/5"></div>
             <figcaption class="absolute left-3 right-3 bottom-3 text-white">
               <p class="font-bold">Patio & Outdoor Living</p>

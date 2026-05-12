@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Custom utility classes that were previously defined in tailwind.config. */
+.text-ink {
+  color: #0f172a;
+}
+
+.font-display {
+  font-family: "Sora", "Outfit", "Segoe UI", sans-serif;
+}
+
+.shadow-card {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+.shadow-lift {
+  box-shadow: 0 22px 45px rgba(2, 6, 23, 0.16);
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeDown {
+  animation: fadeDown 0.4s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.25s ease-out;
+}

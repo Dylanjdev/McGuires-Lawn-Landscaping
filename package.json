@@ -4,6 +4,8 @@
   "description": "This is a responsive website built for  a local lawn care service. McGuires-Lawn-Landscaping that showcases services, contact information, and allows customers to easily get in touch for quotes or scheduling.",
   "main": "touch.js",
   "scripts": {
+    "build:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/Dylanjdev/McGuires-Lawn-Landscaping#readme",
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17"
