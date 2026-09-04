@@ -1,18 +1,18 @@
 # SEO Maintenance Checklist for McGuire's Lawn & Landscaping
 
-## ✅ Current SEO Status (2026)
-Your website has excellent SEO already implemented:
-- ✅ Meta tags (title, description, keywords)
-- ✅ Open Graph & Twitter cards
-- ✅ Structured data (JSON-LD) with ratings
-- ✅ Breadcrumb schema
+## ✅ Current SEO Status (September 2026)
+Your website currently includes:
+- ✅ Unique titles and descriptions for every indexable page
+- ✅ Canonical URLs and permissive search-preview directives
+- ✅ Complete Open Graph and X/Twitter cards with image dimensions and alt text
+- ✅ `WebSite`, `WebPage`, `LocalBusiness`, `Article`, `BreadcrumbList`, and matching FAQ JSON-LD
 - ✅ Semantic HTML (h1, h2, sections, articles)
-- ✅ Alt text on images with location keywords
+- ✅ Descriptive image alt text, responsive image sources, and correctly encoded WebP assets
 - ✅ Mobile-friendly responsive design
-- ✅ Fast loading (Tailwind CDN)
-- ✅ Canonical URL
-- ✅ robots.txt file
-- ✅ Google verification
+- ✅ Minified local Tailwind CSS and deferred third-party fonts
+- ✅ Canonical-only XML sitemap with accurate `lastmod` dates
+- ✅ `robots.txt` sitemap discovery and Google Search Console verification
+- ✅ Automated checks via `npm test`
 
 ## 🔄 Monthly Maintenance Tasks
 
@@ -23,9 +23,9 @@ Your website has excellent SEO already implemented:
 - [ ] Update "Recent Work" section with latest projects
 
 ### 2. Performance Optimization (Quarterly)
-- [ ] Compress new images (use TinyPNG or ImageOptim)
+- [ ] Resize and compress new images before publishing; use WebP or AVIF when practical
 - [ ] Test site speed (Google PageSpeed Insights)
-- [ ] Check mobile usability (Google Mobile-Friendly Test)
+- [ ] Review Core Web Vitals and mobile issues in Google Search Console
 - [ ] Review and remove unused images
 
 ### 3. Technical SEO (Monthly)
@@ -127,9 +127,9 @@ Your website has excellent SEO already implemented:
 2. ✅ Take high-quality before/after photos of every project
 3. ✅ Post to Google Business Profile weekly (photos + updates)
 4. ✅ Respond to ALL reviews within 24 hours
-5. ✅ Add customer review schema to testimonials section
-6. ✅ Create a simple FAQ page for common questions
-7. ✅ Set up Google Analytics if not already done
+5. ✅ Keep testimonials visible and verifiable; do not add self-serving review markup
+6. ✅ Keep FAQ answers current and synchronized with FAQ structured data
+7. ✅ Set up privacy-appropriate analytics if not already done
 
 ## 📅 2026 SEO Trends to Watch
 
@@ -158,5 +158,5 @@ Your website has excellent SEO already implemented:
 
 ---
 
-**Last Updated**: January 2026  
+**Last Updated**: September 4, 2026
 **Site**: https://mcguireslawnandlandscaping.com/

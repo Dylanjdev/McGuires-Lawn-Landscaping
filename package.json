@@ -6,7 +6,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.css --minify",
     "watch:css": "tailwindcss -i ./tailwind.input.css -o ./tailwind.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check:seo": "node scripts/check-seo.mjs",
+    "test": "npm run check:seo"
   },
   "repository": {
     "type": "git",

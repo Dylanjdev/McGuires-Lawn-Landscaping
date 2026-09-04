@@ -289,7 +289,6 @@ summary:focus-visible {
   object-fit: cover;
   object-position: 54% 55%;
   transform: scale(1.012);
-  animation: hero-settle 1.2s cubic-bezier(.2,.7,.2,1) both;
 }
 
 .hero-overlay {
@@ -300,9 +299,10 @@ summary:focus-visible {
     linear-gradient(0deg, rgba(5, 30, 23, 0.36) 0%, transparent 50%);
 }
 
-@keyframes hero-settle {
-  from { transform: scale(1.06); }
-  to { transform: scale(1.012); }
+.guide-hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .hero-scroll {
@@ -350,7 +350,7 @@ summary:focus-visible {
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #65726d;
+  color: #56635e;
 }
 
 .section-pad {
@@ -1185,7 +1185,7 @@ summary:focus-visible {
   font-size: 10px;
   line-height: 1.6;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .footer-bottom span {
